@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/main.css">
+    <link rel="stylesheet" href="public/css/button.css">
+    <link rel="stylesheet" href="public/css/records.css">
+    <link rel="stylesheet" href="public/css/modal.css">
+    <script src="public/main.js" defer></script>
+    <title>Bem vindo à Gamer's Academy!</title>
+</head>
+<style>
+    body{
+        background-color: rgba(61, 151, 224, 0.336);
+    }
+
+    footer{
+        color: rgb(255, 255, 255);
+        background-color: rgb(0, 0, 0);
+    }
+</style>
+<body>
+    <header>
+        <h1 class="header-title">Cadastro de Alunos GAMER'S ACADEMY</h1>
+    </header>
+    <main>
+        <tr>
+            <th><button type="button" class="button blue mobile" id="cadastrarCliente">Cadastrar Aluno</button></th>
+            <th><input type="text" name="search" id="procurarCategoria" placeholder="Procurar Categoria" required></th>
+            <th><button type="submit"><i class="button blue mobile">Procurar</i></button></th>
+        </tr>
+        <table id="tableClient" class="records">
+                <thead>
+                        <tr>
+                            <!--adicionar upload de imagem e barra de busca para os cursos -->
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Celular</th>
+                            <th>Cidade</th>
+                            <th>Professor</th>
+                            <th>Categoria</th>
+                            <th>Descricao</th>
+                            <th>Foto</th>
+                            <th>Ação</th>
+                        <tr>
+                </thead>
+                <tbody>  
+            
+            
+
+
+                </tbody>
+        </table>
+
+
+
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Novo Aluno</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <input type="text" id="nome" data-logado="new" class="modal-field" placeholder="Nome do Aluno" required>
+                    <input type="email" id="email" class="modal-field" placeholder="e-mail do Aluno" required>
+                    <input type="text" id="celular" class="modal-field" placeholder="Celular do Aluno" required>
+                    <input type="text" id="cidade" class="modal-field" placeholder="Cidade do Aluno" required>
+                    <input type="text" id="professor" class="modal-field" placeholder="Professor do Aluno" required>
+                    <input type="text" id="categoria" class="modal-field" placeholder="Categoria do Aluno" required>
+                    <input type="text" id="descricao" class="modal-field" placeholder="Descrição do curso" required>
+                    <input type="file" id="foto" name="foto" action="" method="post" enctype="multipart/form-data" class="modal-field" placeholder="Foto do Aluno" required>
+                </form>
+                <footer class="modal-footer">
+                    <button id= "Salvar" class="button green">Salvar</button>
+                    <button id= "Cancelar" class="button blue">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+    </main>
+    <footer>
+        Copyright &copy; Prof. GiraFallen - GamersAcademy
+    </footer>
+    </body>
+</html>
